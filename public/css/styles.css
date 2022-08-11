@@ -1,0 +1,222 @@
+#contend1{
+    width: 35em;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contend2{
+    width: 50em;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vitrina
+{
+    background-color: #69A6A4;
+}
+
+.vitrina2
+{
+    background-color: #69A6A4;
+}
+
+#wrapper{
+    background-color: #4094a5;
+    width: 100%;
+}
+
+#name{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+#logo-perfil{
+    display: block;
+    margin: auto;
+    width: 5em;
+    height: 5em;
+}
+
+#siderbar{
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(130, 233, 238);
+}
+
+#siderbar.active{
+    margin-left: -300px;
+}
+
+#siderbar ul li {
+    font-size: 1em;
+}
+.siderbar-header{
+
+}
+
+#content2{
+    margin: auto;
+    display:flex;
+    align-items:center;
+    width: 20em;
+    height: 100vh;
+}
+
+#content-3{
+    margin: auto;
+    display:flex;
+    align-items:center;
+    width: 25em;
+    height: 100vh;
+}
+
+.contenedor{
+    width: auto;
+    height: auto;
+    background-image: url('public/img/wallpaper_login.jpg');
+    background-repeat:no-repeat;
+}
+
+
+.list{
+    padding-left: 0;
+    list-style: none;
+}
+
+#siderbar ul li a {
+    text-decoration: none;
+
+    padding: 5px 0;
+    display: block;
+    color: rgba(188, 55, 55, 0.8);
+    border-bottom: 3px solid rgba(176, 169, 169, 0.677);
+}
+
+.navbar-center{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#vitrina{
+
+    background-color: #69A6A4;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    color: white ;
+    font-size: 1.2em;
+    border-radius: 1.5em;
+}
+
+.btn-continuar{
+
+    margin: auto;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ================================================================================================= */
+
+#wrapper{
+    background-color: #4094a5;
+    width: 100%;
+}
+
+#name{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+#logo-perfil{
+    display: block;
+    margin: auto;
+    width: 5em;
+    height: 5em;
+}
+
+#siderbar{
+    width: 40em;
+    height: 100vh;
+    background-color: #437176;
+}
+
+#siderbar.active{
+    margin-left: -300px;
+}
+
+#siderbar ul li {
+    font-size: 1em;
+}
+.siderbar-header{
+
+}
+
+#content2{
+    margin: auto;
+    display:flex;
+    align-items:center;
+    width: 20em;
+    height: 100vh;
+}
+
+#content-3{
+    margin: auto;
+    display:flex;
+    align-items:center;
+    width: 25em;
+    height: 100vh;
+}
+
+.contenedor{
+    width: auto;
+    height: auto;
+    /* background-image: url('public/img/wallpaper_login.jpg'); */
+    background-repeat:no-repeat;
+}
+
+
+.list{
+    padding-left: 0;
+    list-style: none;
+}
+
+#siderbar ul li a {
+    text-decoration: none;
+
+    padding: 5px 0;
+    display: block;
+    color: rgba(188, 55, 55, 0.8);
+    border-bottom: 3px solid rgba(176, 169, 169, 0.677);
+}
+
+.navbar-center{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#vitrina{
+
+    background-color: #69A6A4;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    color: white ;
+    font-size: 1.2em;
+    border-radius: 1.5em;
+}
+
+.btn-continuar{
+
+    margin: auto;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+}
