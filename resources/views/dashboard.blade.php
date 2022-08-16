@@ -5,90 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-    <script src="{{ asset('js/styles.js') }}"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <script type="text/javascript" src="{{ asset('js/styles.js') }}"></script>
     <title>Dashboard</title>
 </head>
 
 <body>
     <div id="wrapper">
-        {{-- <div class="row "> --}}
-        <nav class="navbar navbar-expand-sm bg-danger">
-
-            <button type="button" class="btn d-lg-none btn-link">
-                <i class="bi bi-list"></i>
+        <nav class="navbar navbar-expand-sm">
+            <button type="button" class="btn btn-primary" id="buttonsiderbar">
+                <span class="bi-list"></span>
             </button>
-
-            <button type="button" class="navbar-toggler d-lg-none btn-link" data-toggle="collapse"
-                data-target="#navbarSupportedConted" aria-expanded="false" aria-label="Togglenavigation">
-                <span class="bi bi-list" aria-controls="#navbarSupportedConted" ></span>
+            <button type="button" class="btn d-inline-block d-lg-none ml-auto" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false" aria-lable="Togglenavigation">
+                <i class="navbar-toggler-icon" aria-controls="navbarSupportedContent"></i>
             </button>
-
-
-            <div class="collapse navbar-collapse justify-content-sm-center" id="navbarSupportedConted">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav navbar-center ml-auto ">
                     <li class="navbar-item">
-                        <a class="nav-link" href="#"><i class="bi bi-house"></i> Home </a>
+                        <a href="#"><i class="bi-apple"></i> </a>
                     </li>
                     <li class="navbar-item">
-                        <a class="nav-link" href=""><i class="bi bi-x-lg"></i> Sing out</a>
+                        <a><i class="bi bi-bag-plus"></i></a>
                     </li>
                 </ul>
             </div>
-
-
+            <div class="btn-success">
+                <a href="#" class="bi bi-x-lg"> Sing out</a>
+            </div>
         </nav>
-        <div id="content_body" class="col-2 d-flex">
-
-            <nav id="siderbar">
-                {{-- <div class="collapse navbar-collapse" id="btncollapse"> --}}
-                {{-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> --}}
-                <ul class="list">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-pull"></i> Menu </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=""><i class="bi bi-bell"></i> N</a>
-                    </li>
-                </ul>
-                {{-- </div> --}}
-
-            </nav>
-            <div class="content">
-                @yield('contend')
-                <h3>A B C</h3>
-            </div>
-        </div>
     </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div id="content">
+        <nav id="siderbar" class="float-start d-inline-block p-0 text-white">
+            <div class="siderbar-header">
+                {{-- para ver nombre del ususario --}}
+                {{-- <p>{{auth()->user()->name}}</p> --}}
+                {{-- condiciono la imagen del usuario
+                @if (auth()->check())
+                @endif --}}
+                <!-- <img id="logo-perfil"
+                    src="{{ url('https://media.revistagq.com/photos/5fc4d3e608c92a6bb64b9b83/1:1/w_960,c_limit/baby-yoda-nombre.jpg') }}"
+                    class="img-fluid rounded-circle shadow-lg"> -->
+            </div>
+
+            <ul class="list">
+                <li>
+                    <a data-toggle="collapse" data-target="#list1" aria-expanded="false" aria-lable="Togglenavigation">
+                        Abrir
+                    </a>
+                    <ul class="collapse" id="list1">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">Servicio1</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target="#list2" aria-expanded="false" aria-lable="Togglenavigation">
+                        Roles
+                    </a>
+                    <ul class="collapse" id="list2">
+                        <li><a href="{{route('roles.index')}}">index</a></li>
+                        <li><a href="{{route('roles.create')}}">create</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row py-4 flex-lg-wrap justify-content-center">
+        @yield('content')
+    </div>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{{-- <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> --}}

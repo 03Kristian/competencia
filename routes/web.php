@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\RoleController;
 
 use function Psy\debug;
 
@@ -23,3 +24,5 @@ Route::get('/', function () {
 Route::get('/registro',[\App\Http\Controllers\LoginController::class,'registro'])->name('registro');
 
 Route::get('/login',[\App\Http\Controllers\LoginController::class,'login'])->name('login');
+
+Route::resource('roles',RoleController::class)->middkeware('role:');
